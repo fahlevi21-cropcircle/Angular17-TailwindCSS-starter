@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular17": {
+    "Portfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -27,7 +27,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "aot": true
           },
           "configurations": {
             "production": {
@@ -57,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Angular17:build:production"
+              "buildTarget": "Portfolio:build:production"
             },
             "development": {
-              "buildTarget": "Angular17:build:development"
+              "buildTarget": "Portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Angular17:build"
+            "buildTarget": "Portfolio:build"
           }
         },
         "test": {
