@@ -1,3 +1,31 @@
-<p>
-  about works!
-</p>
+<div id="about" class="px-10">
+  <div class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
+    <div class="relative">
+      <img class="h-1/4 absolute top-0 left-0 -z-10" src="assets/dots.png" alt="dots">
+      <div class="h-full rounded-full overflow-hidden">
+        <img src="assets/portrait.png" alt="potrait">
+      </div>
+    </div>
+
+    <div class="my-auto flex flex-col gap-3">
+      <h1 class="font-bold text-green-600">ABOUT ME</h1>
+      <h1 class="text-3xl font-medium">Better Design</h1>
+      <h1 class="text-3xl font-medium">Better Experience</h1>
+      <p class="text-gray-400">
+        I design and build digital products. I'm also a multi-disciplinary
+        maker with over 10 years of experiences in wide range of design
+        disciplines.
+      </p>
+      <ng-container *ngTemplateOutlet="skill;context:{title : 'HTML', amount: 'w-full'}"></ng-container>
+      <ng-container *ngTemplateOutlet="skill;context:{title : 'JavaScript', amount: 'w-4/6'}"></ng-container>
+      <ng-container *ngTemplateOutlet="skill;context:{title : 'Angular', amount: 'w-5/6'}"></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #skill let-title="title" let-amount="amount">
+  <h2 class="text-gray-400 font-medium">{{title}}</h2>
+  <div class="w-full bg-gray-200 h-1.5 rounded-md">
+    <div class="bg-green-600 h-1.5 rounded-md" [ngClass]="amount"></div>
+  </div>
+</ng-template>
