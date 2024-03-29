@@ -1,0 +1,21 @@
+<div class="py-40">
+  <div class="container mx-auto">
+    <div class="flex flex-col gap-3 items-center">
+      <h1 class="font-bold text-green-600">PROJECTS</h1>
+      <h1 class="text-3xl">Works & Projects</h1>
+      <p class="w-1/2 text-center font-sm text-gray-400">
+        I help designers, small agencies and businesses bring their ideas to life. Powered by Figma, VS Code and coffee,
+        I turn your requirements into a well-designed websites
+      </p>
+    </div>
+
+    <div class="p-5 sm:p-0 my-10 grid md:grid-rows-2 md:grid-flow-col-dense gap-5">
+      <div class="flex flex-col justify-center items-center gap-3 my-3" *ngFor="let row of [1,1,1,1,1,1,1,1]">
+        <div class="w-4/5 lg:w-72 rounded-lg shadow-md transition-all hover:scale-110">
+          <img src="assets/item.png" class="w-full" alt="project">
+        </div>
+        <p class="text-sm text-gray-400">Project Title</p>
+      </div>
+    </div>
+  </div>
+</div>
