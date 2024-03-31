@@ -1,4 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import Typed from 'typed.js';
 import { AboutComponent } from '../about/about.component';
 import { ServiceComponent } from '../service/service.component';
@@ -39,5 +45,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
 
     // typed.start();
+  }
+
+  themeChanged(dark: any) {
+    if (dark) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
   }
 }
